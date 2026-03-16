@@ -1,0 +1,177 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+/* --- NAVIGATION STYLE --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 25px 50px;
+    display: flex;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: -0.5px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: inherit;
+    margin: 0 15px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.btn-signup {
+    text-decoration: none;
+    padding: 12px 24px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+/* --- SCROLLED "PILL" STATE --- */
+.navbar.scrolled {
+    padding: 15px 20px;
+}
+
+.navbar.scrolled .logo, 
+.navbar.scrolled .nav-links, 
+.navbar.scrolled .nav-auth a {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0,0,0,0.05);
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.navbar.scrolled .nav-auth a {
+    background: #000;
+    color: #fff;
+}
+
+/* --- SKILLS SECTION --- */
+.hero {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #f8fbff, #fff);
+}
+
+.skills-grid-container {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.skill-card {
+    background: #fff;
+    border: 1px solid #edf2f7;
+    padding: 40px;
+    border-radius: 24px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.card-number {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #00b4d8;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #e0f2f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.badge {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: #e0f2f7;
+    color: #00b4d8;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    color: #718096;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.view-all-btn {
+    background: #1a202c;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.view-all-btn:hover {
+    background: #00b4d8;
+}
+
+.arrow {
+    font-size: 1.1rem;
+}
